@@ -1,0 +1,439 @@
+/*General*/
+.titleDonAM{
+  position: absolute;
+  z-index: 999;
+  margin-top: 200px;
+  margin-left: 225px;
+  color: white;
+  font-size: 100px;
+  text-shadow: 0 1px 2px #000;
+}
+.header{
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 0px;
+  color: white;
+  text-indent: 2em;
+  margin-top: 0;
+}
+.navText{
+  color: rgba(255,255,255,.5);;
+  padding: 20px;
+  font-size: 16px;
+  position: absolute;
+  height: 70px;
+  z-index: 100;
+  width: 100%;
+  }
+.hr{
+     margin: 5rem 0;
+     width: 92%;
+     margin-left: 5%;
+  }
+.error{
+  color: red;
+}
+.closeBut{
+  cursor: pointer;
+}
+
+/*bar menu*/
+ul#menu{
+  list-style: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  font-style: 10px;
+  margin-left: 4%;
+}
+ul#menu li{
+  float: left;
+  overflow: hidden;
+  font-style: 10px;
+}
+
+ul#menu li:hover, ul#menu li.selected{
+  color: white;
+  cursor: pointer;
+}
+
+.loginRegis{
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 155px;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  margin-left: 20px;
+}
+
+.logoutButton{
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 155px;
+  margin-top: 20px;
+  margin-left: 196px;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+
+/*Pop ups Login y Registration*/
+.popupLogin{
+  padding: 0;
+  margin: auto;
+  text-align: center;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
+  margin: 0 auto;
+  position: absolute;
+  display: none;
+  top: 13%;
+  left: 65%;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.popupRegis{
+  padding: 0;
+  margin: auto;
+  text-align: center;
+  width: 800px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
+  margin: 0 auto;
+  position: absolute;
+  display: none;
+  top: 13%;
+  left: 35%;
+  z-index: 1000;
+  border-radius: 10px;
+}
+.text-agreement{
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.buttonSubmitLogin{
+  border-radius: 22px;
+  width: 200px;
+  height: 41px;
+  color: white;
+  background-color: #a1321f;
+  border: none;
+  margin-left: 80px;
+  margin-right: 80px;
+  cursor: pointer;
+}
+.buttonSubmitRegis{
+  border-radius: 22px;
+  width: 200px;
+  height: 41px;
+  color: white;
+  background-color: #a1321f;
+  border: none;
+  margin-left: 300px;
+  margin-right: 300px;
+  cursor: pointer;
+}
+.poptext{
+  text-align: left;
+  margin-left: 7%;
+}
+.poptextR{
+  text-align: left;
+  margin-left: 45px;
+}
+.popinputLogin{
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid gray;
+}
+.popinputRegis{
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid gray;
+}
+.title-regis{
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.text-regis{
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 20px;
+}
+.text-regis2{
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 20px;
+  padding-right: 45px;
+}
+.close{
+  color: white;
+  opacity: 0.7;
+}
+.closeR{
+  position: absolute;
+  left: 750px;
+  top: 20px;
+}
+
+/*slider*/
+.slider{
+  width: 100%;
+  max-height: 495px;
+  margin-bottom: 80px;
+}
+.pointer{
+  width:
+}
+.move-slider{
+  margin-bottom: 30px;
+}
+
+/*Eventos*/
+.eventos-title{
+  color: #a1321f;
+  margin-right: 2%;
+  margin-top: 5%;
+  font-size: 50px;
+  font-weight: 400;
+}
+.eventos-text{
+  padding-right: 30px;
+}
+.img-Evento{
+  margin-left: 20%;
+  height: 300px;
+  width: 500px;
+}
+
+/*Redes Sociales*/
+.redesS-titles{
+  color: #a1321f;
+  margin-left: 40%;
+  margin-top: 3%;
+  font-size: 50px;
+  font-weight: 400;
+}
+.faceTitle{
+  margin-left: 40%;
+  margin-top: 5%;
+  font-size: 50px;
+}
+.facelink{
+  margin-left: 30%;
+  margin-top: 5%;
+  font-size: 30px;
+}
+
+
+/*reviews*/
+.reviews{
+  padding-top: 68px;
+  margin-left: 80px;
+}
+.backImage{
+  height: 150vh;
+  position: absolute;
+  width: 100%
+}
+.addTitle{
+  color:black;
+  font-weight: bold;
+}
+.submitReview{
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 155px;
+  background-color: rgba(0, 0, 0, 0.7);;
+  cursor: pointer;
+}
+.reviewBox{
+  border-radius: 5px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.92);
+}
+.reseñasTitle{
+  margin-top: 30px;
+  background-color: #a1321f;
+  opacity: 1;
+  color: white;
+  text-shadow: 0 1px 1px #000;
+  height: 70px;
+  width: 1100px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.reseñasText{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+}
+.reseñasAgrega{
+  margin-top: 216px;
+  position: absolute;
+  left: 780px;
+  height: 10px;
+}
+.reseñasCarga{
+  border: 1px solid gray;
+  width: 600px;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.92);
+}
+.loadReviews{
+  background-color: rgba(255, 255, 255, 0.88);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.betweenAlert{
+  margin-top: 100px;
+}
+.showAlert{
+  position: absolute;
+  width: 350px;
+  border: 1px solid rgba(0, 100, 0, 0.71);
+  border-radius: .25rem;
+  margin-bottom: 0;
+}
+.buttonAlert{
+  cursor: pointer;
+  padding: .75rem .05rem;
+  width: 20px;
+}
+.errorReview{
+  color: red;
+  width: 200px;
+  height: 27px;
+  border-radius: 7px;
+  padding-left: 15px;
+}
+
+/*Servicios*/
+#services{
+  padding-top: 150px;
+}
+.titleServices{
+  z-index: 1;
+  padding-top: 150px;
+  margin-left: 100px;
+  color: white;
+  font-size: 100px;
+  text-shadow: 0 1px 2px #000;
+}
+.servicesRow{
+  margin-top: 10px;
+  margin-right: 60px;
+  margin-left: 80px;
+}
+.cardPaquetes{
+  width: 21rem;
+}
+.servicesPaso1{
+  border: 2px solid #a1321f;
+  border-radius: 40px;
+  padding-left: 15px;
+  padding-top: 2px;
+  padding-bottom:3px;
+  padding-right: 15px;
+  margin-left: 85px;
+}
+.servicesPasos{
+  border: 2px solid #a1321f;
+  border-radius: 40px;
+  padding-left: 13px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 13px;
+}
+.elige{
+  margin-right: 67px;
+}
+.selectPaquete{
+  width: 250px;
+  height: 50px;
+  background-color: transparent;
+  color: gray;
+  border: 1px solid #ced4da;
+}
+.cartServicio{
+  position: absolute;
+  left: 800px;
+  top: 1383px;
+}
+.addCarrito{
+  margin-top: 56px;
+  width: 300px;
+  height: 50px;
+  background-color: #a1321f;
+  color: #fff;
+  cursor: pointer;
+}
+.servicesChoose{
+  margin-right: 60px;
+  margin-left: 81px;
+  margin-top: 78px;
+}
+.comenService{
+  height: 100px;
+  width: 567px;
+}
+.formService{
+  margin-left: 0px;
+}
+.cardImage{
+  height: 250px;
+  width: 335px;
+}
+p.card-text{
+  margin-bottom: 0;
+}
+.servicesPortada{
+  position: absolute;
+  z-index: -1;
+  padding-top: 0px;
+  margin-top: 0px;
+  width: 100vw;
+  height: 400px;
+  background-size: cover;
+}
+.siguePasos{
+  margin-left: 15px;
+  background-color: #a1321f;
+  color: white;
+  padding-top: 2px;
+  border: 1px solid black;
+}
+
+.pasos{
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+
+/*Carrito*/
+.muestraCarro{
+  padding-top: 100px;
+}

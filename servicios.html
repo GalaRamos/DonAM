@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> Servicios </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/font/css/font-awesome.min.css">
+
+    <meta charset="utf-8"/>
+    <div class="header navText">
+        <ul id="menu">
+          <li id="inicio"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Inicio</li>
+          <li id="servicios" class="selected"><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i> Servicios</li>
+          <li id="resenas"><i class="fa fa-user-o fa-2x" aria-hidden="true"></i> Reseñas</li>
+          <li id="carrito"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>  Carrito</li>
+          <li id="contactanos"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i> Contactanos</li>
+          <li id="showLogin"><button class="loginRegis">Iniciar Sesión</button></li>
+          <li id="showRegist"><button class="loginRegis">Registrarse</button></li>
+          <li id="logout"><button class="logoutButton">Cerrar Sesión</button><li>
+        </ul>
+    </div>
+
+    <div id="LoginPop" class="popupLogin grid-item">
+        <div class="text-agreement">
+          <h1> Iniciar Sesión </h1>
+          <p class="poptext"> Usuario </p>
+          <input id="username"  name= "username" class="popinputLogin" type="text" placeholder="  Ingresa tu usuario"/>
+          <br><span id="errorUsername" class="error"></span><br>
+          <p class="poptext"> Contraseña </p>
+          <input id="password" name= "password" class="popinputLogin" type="password" placeholder="  Ingresa tu contraseña"/>
+          <br><span id= "errorPassword" class="error"> </span><br>
+          <p>
+          <input id="remember" type="checkbox" name= "remember" value="1" checked> Recuerdame  </br>
+          </p>
+          <input type="submit" class="buttonSubmit" id="login" value="Login" form= "loginForm">
+        <br>
+      </div>
+    </div>
+
+    <div id="RegistrationPop" class="container popupRegis grid-item">
+      <h1 class="title-regis"> Registrarse </h1>
+      <div class="row">
+        <div class="col-6 text-regis">
+          <p class="poptextR"> First Name </p>
+          <input id="firstName"  name= "firstName" class="popinputRegis" type="text" placeholder="  Ingresa tu nombre"/>
+          <br><span id="errorFirstName" class="error"></span><br>
+
+          <p class="poptextR"> Last Name </p>
+          <input id="lastName" name= "lastName" class="popinputRegis" type="password" placeholder="  Ingresa tu apellido"/>
+          <br><span id= "errorLastName" class="error"> </span><br>
+
+          <p class="poptextR"> Username </p>
+          <input id="userName" name= "userName" class="popinputRegis" type="password" placeholder="  Ingresa tu usuario"/>
+          <br><span id= "errorUsername2" class="error"> </span><br>
+        </div>
+        <div class=" col-6 text-regis2">
+          <p class="poptext"> Email </p>
+          <input id="email" name= "email" class="popinputRegis" type="password" placeholder="  Ingresa tu usuario"/>
+          <br><span id= "errorEmail" class="error"> </span><br>
+
+          <p class="poptext"> Password </p>
+          <input id="password2" name= "password2" class="popinputRegis" type="password" placeholder="  Ingresa tu usuario"/>
+          <br><span id= "errorPassword2" class="error"> </span><br>
+
+          <p class="poptext"> Password confirmation </p>
+          <input id="passwordConf" name= "passwordConf" class="popinputRegis" type="password" placeholder="  Ingresa tu usuario"/>
+          <br><span id= "errorPasswordConfirmation" class="error"> </span><br>
+          <br>
+        </div>
+        <input type="submit" class="buttonSubmit" id="registration" value="Submit" form= "submitForm">
+      </div>
+    </div>
+  </head>
+
+  <body>
+    <img class="servicesPortada" src="assets/comida5.png" alt="">
+    <h1 class="titleServices">Lo Mejor para tu evento <i class="fa fa-exclamation" aria-hidden="true"></i></h1>
+    <div id="services">
+      <h2 class="pasos">Sigue los pasos para realizar tu orden:<span class="servicesPaso1 siguePasos">1</span> Menú   <span class="servicesPasos siguePasos">2</span> Elige   <span class="servicesPasos siguePasos">3</span> Ordena</h2>
+      <hr class="pasos"><br><br>
+      <h2><span class="servicesPaso1">1</span> Ve el menú</h2><br>
+      <div class="row servicesRow">
+        <div class="col-4">
+          <div class="card cardPaquetes">
+            <img class="card-img-top" src="assets/banner5.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Taquiza</h4>
+              <p class="card-text"><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Tacos de trompo y bistec</p>
+              <p class="card-text"><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Gringas</p>
+              <p class="card-text"><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Campechanas</p>
+              <p class="card-text"><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Piratas</p><br>
+              <p class="card-text">Incluye: Salsa, limones, cebolla asada con papá Galeana y deshechables.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card cardPaquetes">
+            <img class="card-img-top cardImage" src="assets/cazuelas.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Cazuelas</h4>
+              <p class="card-text">Elige una opción e indicala en los comentarios:</p>
+              <p class="card-text"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Chicharrón en salsa verde o roja</p>
+              <p class="card-text"> <i class="fa fa-arrow-right" aria-hidden="true"></i>  Chicharrón</p>
+              <p class="card-text"> <i class="fa fa-arrow-right" aria-hidden="true"></i>  Pollo en mole</p>
+              <p class="card-text"> <i class="fa fa-arrow-right" aria-hidden="true"></i>  Queso con rajas</p>
+              <p class="card-text"> <i class="fa fa-arrow-right" aria-hidden="true"></i>  Queso en salsa</p>
+              <p class="card-text"> <i class="fa fa-arrow-right" aria-hidden="true"></i>  Deshebrada</p>
+              <p class="card-text"> <i class="fa fa-arrow-right" aria-hidden="true"></i>  Asado</p><br>
+              <p>Incluye: Salsa, tortillas, complementos (frijoles y arroz) y deshechables</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card cardPaquetes">
+            <img class="card-img-top cardImage" src="assets/antojitos.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Antojitos</h4>
+              <p class="card-text"><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Sopes</p>
+              <p class="card-text"><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Enchiladas</p>
+              <p class="card-text"><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Flautas</p><br>
+              <p class="card-text">Incluye: Papas, salsa picota, aguacate, verduras y deshechables</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+    <hr class="pasos">
+    <div id="addCart" class="servicesChoose">
+      <h2><span class="servicesPasos">2</span> Elige un paquete:</h2><br>
+      <div>
+        <form>
+          <div class="col-md-12 form-row formService">
+            <div class="form-group">
+              <label for="inputEmail4">Paquete:</label>
+              <div class="elige dropdown">
+                <select id="paquetes" class="selectPaquete">
+                  <option class="optionSelect" value="">Selecciona una opción</option>
+                  <option class="optionSelect" value="taquiza">Taquiza</option>
+                  <option value="cazuela">Cazuelas</option>
+                  <option value="antojitos">Antojitos</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword4">Cantidad de personas:</label>
+              <input id="numPersonas" type="text" class="form-control selectPaquete" placeholder="#">
+            </div>
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="inputAddress">Deja un comentario en tu pedido:</label>
+            <input id="comentarios" type="text" class="form-control comenService" placeholder="">
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-6 cartServicio">
+        <h2><span class="servicesPasos">3</span> Haz tu pedido:</h2>
+        <button id="agregarCarrito" type="submit" class="addCarrito btn">Agregar a carrito <i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+        <br><br>
+        <div id="addAlert">
+        </div>
+      </div>
+
+
+
+    </div>
+  </body>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/loginAndRegistrationjs"></script>
+  <script type="text/javascript" src="js/home.js"></script>
+</html>
