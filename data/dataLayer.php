@@ -127,7 +127,11 @@
 
 		 if($connection != null)
 		 {
-		 	$sql = "INSERT INTO Reviews(username, review)
+		 	$sql = "SELECT username FROM Users WHERE username = '$userName'";
+			$result = $connection->query($sql);
+
+			if ($result->num_rows > 0){
+		 		$sql = "INSERT INTO Reviews(username, review)
 				VALUES ('$username', '$review');";
 				if (mysqli_query($connection, $sql))
 					{
@@ -140,6 +144,7 @@
 						$connection->close();
 						return array("MESSAGE"=>"500");
 					}
+				}
 		}
 		else {
 			return array("MESSAGE"=>"500");
