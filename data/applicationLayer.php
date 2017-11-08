@@ -141,7 +141,7 @@
 	}
 	else
 	{
-		header('HTTP/1.1 406 Session not found yet.');
+		header('HTTP/1.1 406 Favor de iniciar sesion.');
 		die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
 	}
 	}
