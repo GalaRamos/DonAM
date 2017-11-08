@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	var jsonToSend = {
 		"action" : "COOKIESERVICE"
@@ -66,6 +66,7 @@ if (valid){
 					document.getElementById('LoginPop').style.display = "none";
 					document.getElementById('showLogin').style.display = "none";
 					document.getElementById('showRegist').style.display = "none";
+					mostrarCarrito();
 					//document.getElementsByClassName('logoutButton').style.display = "";
 				},
 				error: function(error){
@@ -186,4 +187,4 @@ if (valid){
 	}
 }
 
-});
+});*/
