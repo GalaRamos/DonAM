@@ -37,6 +37,9 @@
 .closeBut{
   cursor: pointer;
 }
+.closeee{
+  margin-left: 10px;
+}
 
 /*bar menu*/
 ul#menu{
