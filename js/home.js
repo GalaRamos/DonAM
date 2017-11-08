@@ -64,6 +64,26 @@ $(document).ready(function(){
 	});
 	
 
+	$("#agregarCarrito").on("click", function(){
+		var jsonToSend = {
+			"action" : "SESSIONSERVICE"
+		};
+
+		$.ajax({
+			url : "./data/applicationLayer.php",
+			type : "POST",
+			data : jsonToSend,
+			dataType : "json",
+			success : function(dataReceived){
+			//$("h2").text(dataReceived.fName + " " + dataReceived.lName + " " + dataReceived.username);
+			},
+			error : function(errorMessage){
+			alert(errorMessage.statusText);
+			//window.location.replace("./TheJammer_A01280664.html");
+			}
+		});
+	});
+
 //Logout
 	$("#logout").on("click", function(){
 		var jsonToSend = {
@@ -115,9 +135,9 @@ $(document).ready(function(){
 
 								//Show a nice alert to say the comment was save
 								addAlert += '<div class="alert alert-success alert-dismissible fade show showAlert" role="alert">';
-			          addAlert += '<strong>Bien hecho!</strong> Tu comentario se guardo<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-			          addAlert += '<span aria-hidden="true">&times;</span></button>';
-			          addAlert += '</div>';
+						        addAlert += '<strong>Bien hecho!</strong> Tu comentario se guardo<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+						        addAlert += '<span aria-hidden="true">&times;</span></button>';
+						        addAlert += '</div>';
 
 								//Add the reviews to the review section
 								addReview += '<div class="reseñasCarga">';
@@ -131,7 +151,7 @@ $(document).ready(function(){
 								$("#loadReviews").append(addReview);
 							},
 							error: function(error){
-								alert(error.statusText);
+								//alert(error.statusText);
 								console.log(error.statusText);
 							}
 						});
@@ -201,7 +221,7 @@ $(document).ready(function(){
 
 				},
 				error: function(error){
-					alert(error.statusText);
+					//alert(error.statusText);
 					console.log(error.statusText);
 				}
 			});
