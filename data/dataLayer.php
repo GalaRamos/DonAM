@@ -186,19 +186,24 @@
 
 		 if($connection != null)
 		 {
-		 	$sql = "INSERT INTO Ordenes(username, paquete, comentarios, precio)
-				VALUES ('$username', '$paquete', '$comentarios', $numPersonas * 70);";
-				if (mysqli_query($connection, $sql))
-					{
-							$response = array("MESSAGE"=>"SUCCESS");
-							$connection->close();
-							return $response;
-					}
-					else
-					{
-						$connection->close();
-						return array("MESSAGE"=>"500");
-					}
+			 $sql = "SELECT username FROM Users WHERE username = '$userName'";
+			 $result = $connection->query($sql);
+
+			 if ($result->num_rows > 0){
+				 $sql = "INSERT INTO Ordenes(username, paquete, comentarios, precio)
+					 VALUES ('$username', '$paquete', '$comentarios', $numPersonas * 70);";
+					 if (mysqli_query($connection, $sql))
+						 {
+								 $response = array("MESSAGE"=>"SUCCESS");
+								 $connection->close();
+								 return $response;
+						 }
+						 else
+						 {
+							 $connection->close();
+							 return array("MESSAGE"=>"500");
+						 }
+			 }
 		}
 		else {
 			return array("MESSAGE"=>"500");

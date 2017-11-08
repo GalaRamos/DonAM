@@ -62,7 +62,7 @@ $(document).ready(function(){
 			}
 		});
 	});
-	
+
 
 	$("#agregarCarrito").on("click", function(){
 		var jsonToSend = {
