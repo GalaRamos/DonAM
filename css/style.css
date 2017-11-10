@@ -68,8 +68,6 @@ ul#menu li:hover, ul#menu li.selected{
   width: 155px;
   background-color: transparent;
   cursor: pointer;
-  display: block;
-  margin-left: 20px;
 }
 
 .logoutButton{
@@ -81,7 +79,6 @@ ul#menu li:hover, ul#menu li.selected{
   margin-left: 196px;
   background-color: transparent;
   cursor: pointer;
-  display: block;
 }
 
 
@@ -160,12 +157,14 @@ ul#menu li:hover, ul#menu li.selected{
 .popinputLogin{
   width: 300px;
   height: 40px;
+  padding-left: 15px;
   border-radius: 7px;
   border: 1px solid gray;
 }
 .popinputRegis{
   width: 300px;
   height: 40px;
+  padding-left: 15px;
   border-radius: 7px;
   border: 1px solid gray;
 }
@@ -439,4 +438,9 @@ p.card-text{
 /*Carrito*/
 .muestraCarro{
   padding-top: 100px;
+}
+
+
+.showOptions{
+  display: none;
 }

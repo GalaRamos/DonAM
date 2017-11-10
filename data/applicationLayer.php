@@ -135,33 +135,33 @@
 	function sessionService()
 	{
 		session_start();
-	if (isset($_SESSION['firstname']) && isset($_SESSION['lastname']))
-	{
-		echo json_encode(array('fName' => $_SESSION['firstname'], 'lName' => $_SESSION['lastname'], 'username' => $_SESSION['username']));
-	}
-	else
-	{
-		header('HTTP/1.1 406 Favor de iniciar sesion.');
-		die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
-	}
+		if (isset($_SESSION['firstname']) && isset($_SESSION['lastname']))
+		{
+			echo json_encode(array('fName' => $_SESSION['firstname'], 'lName' => $_SESSION['lastname'], 'username' => $_SESSION['username']));
+		}
+		else
+		{
+			header('HTTP/1.1 406 Favor de iniciar sesion.');
+			die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+		}
 	}
 
 	function deleteSessionService()
 	{
 		session_start();
-	if (isset($_SESSION['firstname']) && isset($_SESSION['lastname']))
-	{
-		unset($_SESSION['firstname']);
-		unset($_SESSION['lastname']);
-		unset($_SESSION['username']);
-		session_destroy();
-		echo json_encode(array('success' => 'Session deleted'));
-	}
-	else
-	{
-		header('HTTP/1.1 406 Session not found yet.');
-		die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
-	}
+		if (isset($_SESSION['firstname']) && isset($_SESSION['lastname']))
+		{
+			unset($_SESSION['firstname']);
+			unset($_SESSION['lastname']);
+			unset($_SESSION['username']);
+			session_destroy();
+			echo json_encode(array('success' => 'Session deleted'));
+		}
+		else
+		{
+			header('HTTP/1.1 406 Session not found yet.');
+			die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+		}
 	}
 
 	function cookieService()

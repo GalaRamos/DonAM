@@ -127,7 +127,7 @@
 
 		 if($connection != null)
 		 {
-		 	$sql = "SELECT username FROM Users WHERE username = '$userName'";
+		 	$sql = "SELECT username FROM Users WHERE username = '$username'";
 			$result = $connection->query($sql);
 
 			if ($result->num_rows > 0){
@@ -186,7 +186,7 @@
 
 		 if($connection != null)
 		 {
-			 $sql = "SELECT username FROM Users WHERE username = '$userName'";
+			 $sql = "SELECT username FROM Users WHERE username = '$username'";
 			 $result = $connection->query($sql);
 
 			 if ($result->num_rows > 0){

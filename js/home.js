@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 	$("#addReview").on("click", addReview);
 	loadReviews();
+	hideLogs();
 	//mostrarCarrito();
 
 /*Show Pop Ups*/
@@ -41,7 +42,6 @@ $(document).ready(function(){
 
 	});
 
-
 //Session
 	$("#addReview").on("click", function(){
 		var jsonToSend = {
@@ -54,11 +54,9 @@ $(document).ready(function(){
 			data : jsonToSend,
 			dataType : "json",
 			success : function(dataReceived){
-			//$("h2").text(dataReceived.fName + " " + dataReceived.lName + " " + dataReceived.username);
 			},
 			error : function(errorMessage){
 			alert(errorMessage.statusText);
-			//window.location.replace("./TheJammer_A01280664.html");
 			}
 		});
 	});
@@ -75,14 +73,34 @@ $(document).ready(function(){
 			data : jsonToSend,
 			dataType : "json",
 			success : function(dataReceived){
-			//$("h2").text(dataReceived.fName + " " + dataReceived.lName + " " + dataReceived.username);
 			},
 			error : function(errorMessage){
 			alert(errorMessage.statusText);
-			//window.location.replace("./TheJammer_A01280664.html");
 			}
 		});
 	});
+
+	function hideLogs(){
+		var jsonToSend = {
+			"action" : "SESSIONSERVICE"
+		};
+
+		$.ajax({
+			url : "./data/applicationLayer.php",
+			type : "POST",
+			data : jsonToSend,
+			dataType : "json",
+			success : function(dataReceived){
+				$(".logoutButton").show();
+				$(".loginRegis").hide();
+			},
+			error : function(errorMessage){
+				$(".loginRegis").show();
+				$(".logoutButton").hide();
+				console.log("entra e error");
+			}
+		});
+	};
 
 //Logout
 	$("#logout").on("click", function(){
@@ -97,8 +115,7 @@ $(document).ready(function(){
 			dataType : "json",
 			success : function(dataReceived){
 				alert(dataReceived.success);
-				document.getElementById('showLogin').style.display = "block";
-				document.getElementById('showRegist').style.display = "block";
+				hideLogs();
 			},
 			error : function(errorMessage){
 				alert(errorMessage.statusText);
@@ -314,8 +331,6 @@ $(document).ready(function(){
 					"action" : "LOGIN"
 				};
 
-				console.log(jsonToSend);
-
 				$.ajax({
 					url: "./data/applicationLayer.php",
 					type: "POST",
@@ -324,11 +339,10 @@ $(document).ready(function(){
 					dataType: "json",
 					success: function(data){
 						alert("Welcome back " + data.firstname + " " + data.lastname);
-						mostrarCarrito();
 						document.getElementById('LoginPop').style.display = "none";
 						document.getElementById('showLogin').style.display = "none";
 						document.getElementById('showRegist').style.display = "none";
-						//document.getElementsByClassName('logoutButton').style.display = "";
+						hideLogs();
 					},
 					error: function(error){
 						alert(error.statusText);
@@ -436,8 +450,9 @@ $(document).ready(function(){
 				dataType: "json",
 				success: function(data){
 						alert("Bienvenido");
-						console.log("hola");
-
+						document.getElementById('RegistrationPop').style.display = "none";
+						document.getElementById('showLogin').style.display = "none";
+						document.getElementById('showRegist').style.display = "none";
 					},
 					error: function(error){
 						console.log(error.statusText);
