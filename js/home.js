@@ -3,7 +3,6 @@ $(document).ready(function(){
 	$("#addReview").on("click", addReview);
 	loadReviews();
 	hideLogs();
-	//mostrarCarrito();
 
 /*Show Pop Ups*/
 	//Show Login
@@ -114,8 +113,8 @@ $(document).ready(function(){
 			data : jsonToSend,
 			dataType : "json",
 			success : function(dataReceived){
-				alert(dataReceived.success);
 				hideLogs();
+				alert(dataReceived.success);
 			},
 			error : function(errorMessage){
 				alert(errorMessage.statusText);
@@ -226,7 +225,6 @@ $(document).ready(function(){
 			ContentType: "application/json",
 			dataType: "json",
 			success: function(data){
-				mostrarCarrito();
 				//Show a nice alert to say the comment was save
 				var addAlert = "";
 				addAlert += '<div class="alert alert-success alert-dismissible fade show showAlert" role="alert">';
@@ -244,39 +242,6 @@ $(document).ready(function(){
 			});
 	});
 
-//Muestra los pedidos en el carrito
-	function mostrarCarrito()
-	{
-		var jsonToSend = {
- 			"action" : "MOSTRARCARRITO"
- 		};
-
- 		$.ajax({
- 			url : "./data/applicationLayer.php",
- 			type : "POST",
-			ContentType: "application/json",
-			data: jsonToSend,
-			dataType : "json",
-			success : function(dataReceived){
-
-				var newHtml = "";
-
-				for (var i=0; i< dataReceived.length; i++)
-				{
-					newHtml += '<div class= "marginFormat">' + '<div class= "cuadrito">'+ '<p align= center> <b> Username: </b>' + dataReceived[i].username + '</div>' + '<br>' + '</p>';
-					newHtml += '<div class= "marginFormat">' + '<div class= "cuadrito">'+ '<p align= center> <b> Paquete: </b>' + dataReceived[i].paquete + '</div>' + '<br>' + '</p>';
-					newHtml += '<div class= "marginFormat">' + '<div class= "cuadrito">'+ '<p align= center> <b> Comentarios: </b>' + dataReceived[i].comentarios + '</div>' + '<br>' + '</p>';
-					newHtml += '<div class= "marginFormat">' + '<div class= "cuadrito">'+ '<p align= center> <b> Precio: </b>' + dataReceived[i].precio + '</div>' + '<br>' + '</p>';
-				}
-				console.log(dataReceived);
-				newHtml += '</div>';
-				$("#mostrarCarrito").append(newHtml);
-			},
-			error : function(errorMessage){
-				alert(errorMessage.statusText);
-			}
- 		});
-	}
 
 	var jsonToSend = {
 		"action" : "COOKIESERVICE"

@@ -75,8 +75,7 @@ ul#menu li:hover, ul#menu li.selected{
   border: 1px solid white;
   border-radius: 15px;
   width: 155px;
-  margin-top: 20px;
-  margin-left: 196px;
+  margin-left: 80px;
   background-color: transparent;
   cursor: pointer;
 }
