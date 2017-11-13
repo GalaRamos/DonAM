@@ -25,13 +25,13 @@ function mostrarCarrito()
 					cant ++;
 					var foto = "";
 					if(dataReceived[i].paquete == "Taquiza"){
-						var foto = '<img src="./assets/taquiza.png" alt="" class="imagenCarrito">';
+						var foto = '<img src="./assets/taquiza.png" alt="" class="img-thumbnail imagenCarrito">';
 					}
 					else if(dataReceived[i].paquete == "Cazuela"){
-						var foto = '<img src="./assets/cazuela.jpg" alt="" class="imagenCarrito">';
+						var foto = '<img src="./assets/cazuela.jpg" alt="" class="img-thumbnail imagenCarrito">';
 					}
 					else{
-						var foto = '<img src="./assets/antojito.jpg" alt="" class="imagenCarrito">';
+						var foto = '<img src="./assets/antojito.jpg" alt="" class="img-thumbnail imagenCarrito">';
 					}
 
 					newHtml += '<tr>';

@@ -129,7 +129,13 @@ $(document).ready(function(){
 				var valid = true;
 
 				if(review == "" || review == " ") {
-					$("#errorComment").text("* No se puede mandar un mensaje vacio *");
+					var addAlert = "";
+					addAlert += '<div class="alert alert-danger alert-dismissible fade show alertServicio" role="alert">';
+					addAlert += '<strong>Ups!</strong> No se puede mandar un mensaje vacío<button type="button" class="close closeBut" data-dismiss="alert" aria-label="Close">';
+					addAlert += '<span aria-hidden="true">&times;</span></button>';
+					addAlert += '</div>';
+					$("#addAlert").append(addAlert);
+
 					valid = false;
 				}
 				else{
@@ -151,7 +157,7 @@ $(document).ready(function(){
 
 								//Show a nice alert to say the comment was save
 								addAlert += '<div class="alert alert-success alert-dismissible fade show showAlert" role="alert">';
-						        addAlert += '<strong>Bien hecho!</strong> Tu comentario se guardo<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+						        addAlert += '<strong>Bien hecho!</strong> Tu comentario se guardó<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
 						        addAlert += '<span aria-hidden="true">&times;</span></button>';
 						        addAlert += '</div>';
 

@@ -3,7 +3,7 @@
   position: absolute;
   z-index: 999;
   margin-top: 200px;
-  margin-left: 225px;
+  margin-left: 150px;
   color: white;
   font-size: 100px;
   text-shadow: 0 1px 2px #000;
@@ -11,6 +11,15 @@
 .header{
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 0px;
+  color: white;
+  text-indent: 2em;
+  margin-top: 0;
+}
+.header2{
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
   margin: 0;
   padding: 0px;
   color: white;
@@ -26,6 +35,7 @@
   z-index: 100;
   width: 100%;
   }
+
 .hr{
      margin: 5rem 0;
      width: 92%;
@@ -206,28 +216,33 @@ ul#menu li:hover, ul#menu li.selected{
   max-height: 495px;
   margin-bottom: 80px;
 }
-.pointer{
-  width:
-}
+
 .move-slider{
   margin-bottom: 30px;
 }
 
 /*Eventos*/
 .eventos-title{
-  color: #a1321f;
-  margin-right: 2%;
-  margin-top: 5%;
-  font-size: 50px;
-  font-weight: 400;
+  color: rgb(170, 40, 40);
+  font-weight: 800;
+  font-size: 30px;
+
+  text-transform: uppercase;
 }
 .eventos-text{
   padding-right: 30px;
 }
 .img-Evento{
-  margin-left: 20%;
-  height: 300px;
-  width: 500px;
+  height: 200px;
+  width: 300px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+  transition: all .2s ease-in-out;
+  max-width: 100%;
 }
 
 /*Redes Sociales*/
@@ -278,8 +293,7 @@ ul#menu li:hover, ul#menu li.selected{
 }
 .reseñasTitle{
   margin-top: 30px;
-  background-color: #a1321f;
-  opacity: 1;
+  background: linear-gradient(#a1321f , #7d1f1f);  opacity: 1;
   color: white;
   text-shadow: 0 1px 1px #000;
   height: 70px;
@@ -472,7 +486,7 @@ p.card-text{
   border-bottom: 1px solid #e9ecef;
 }
 .carritoTitle{
-  background-color: #a1321f;
+  background: linear-gradient(#a1321f , #7d1f1f);
   opacity: 1;
   color: white;
   text-shadow: 0 1px 1px #000;
@@ -501,4 +515,63 @@ p.card-text{
 
 .marginOrdenes{
   padding-top: 50px;
+}
+
+
+/*Contacto*/
+.contactoTitle{
+  background-color: rgba(255, 255, 255, 0.79);
+  color: #ab2727;
+  opacity: 1;
+  text-shadow: 0 0.5px 0.5px #000;
+  height: 70px;
+  width: 1090px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 15px;
+  padding-top: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.rowContacto{
+  padding-top: 113px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.imgContacto{
+  height: 56px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.imgFace{
+  width: 385px;
+  margin-top: 5px;
+}
+.colContact{
+  margin-top: 50px;
+}
+.textContact{
+  text-shadow: 0 1px 1px #000;
+  color: white;
+}
+.divContact{
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+
+
+
+/*Carousel*/
+.carouselImg{
+  width: 500px;
+  height: 300px;
+}
+.carouselHome{
+  margin-left: 70px;
+  width: 500px;
+  height: 300px;
 }

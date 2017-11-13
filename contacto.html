@@ -13,7 +13,7 @@
           <li id="servicios"><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i> Servicios</li>
           <li id="resenas"><i class="fa fa-user-o fa-2x" aria-hidden="true"></i> Reseñas</li>
           <li id="carrito"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>  Carrito</li>
-          <li id="contactanos" class="selected"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i> Contactanos</li>
+          <li id="contactanos" class="selected"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i> Contáctanos</li>
           <li id="showLogin"><button class="loginRegis showOptions">Iniciar Sesión</button></li>
           <li id="showRegist"><button class="loginRegis showOptions">Registrarse</button></li>
           <li id="logout"><button class="logoutButton showOptions">Cerrar Sesión</button><li>
@@ -22,64 +22,83 @@
 
     <div id="LoginPop" class="popupLogin grid-item">
         <div class="text-agreement">
+          <button id="closelogin" class="close" href="">x</button>
           <h1> Iniciar Sesión </h1>
           <p class="poptext"> Usuario </p>
-          <input id="username"  name= "username" class="popinputLogin" type="text" placeholder="  Ingresa tu usuario"/>
+          <input id="username"  name= "username" class="popinputLogin" type="text" placeholder="Ingresa tu usuario"/>
           <br><span id="errorUsername" class="error"></span><br>
           <p class="poptext"> Contraseña </p>
-          <input id="password" name= "password" class="popinputLogin" type="password" placeholder="  Ingresa tu contraseña"/>
+          <input id="password" name= "password" class="popinputLogin" type="password" placeholder="Ingresa tu contraseña"/>
           <br><span id= "errorPassword" class="error"> </span><br>
           <p>
-          <input id="remember" type="checkbox" name= "remember" value="1" checked> Recuerdame  </br>
+          <input id="remember" type="checkbox" name= "remember" value="1" checked> Recuérdame  </br>
           </p>
-          <input type="submit" class="buttonSubmit" id="login" value="Login" form= "loginForm">
+          <input type="submit" class="buttonSubmitLogin" id="login" value="Login" form= "loginForm">
         <br>
       </div>
     </div>
 
     <div id="RegistrationPop" class="container popupRegis grid-item">
+      <button id="closeregis" class="close closeR" href="">x</button>
       <h1 class="title-regis"> Registrarse </h1>
       <div class="row">
         <div class="col-6 text-regis">
-          <p class="poptextR"> First Name </p>
-          <input id="firstName"  name= "firstName" class="popinputRegis" type="text" placeholder="  Ingresa tu nombre"/>
+          <p class="poptextR"> Nombre</p>
+          <input id="firstName"  name= "firstName" class="popinputRegis" type="text" placeholder="Ingresa tu nombre"/>
           <br><span id="errorFirstName" class="error"></span><br>
 
-          <p class="poptextR"> Last Name </p>
-          <input id="lastName" name= "lastName" class="popinputRegis" type="password" placeholder="  Ingresa tu apellido"/>
+          <p class="poptextR"> Apellido </p>
+          <input id="lastName" name= "lastName" class="popinputRegis" type="text" placeholder="Ingresa tu apellido"/>
           <br><span id= "errorLastName" class="error"> </span><br>
 
-          <p class="poptextR"> Username </p>
-          <input id="userName" name= "userName" class="popinputRegis" type="password" placeholder="  Ingresa tu usuario"/>
+          <p class="poptextR"> Usuario </p>
+          <input id="userName" name= "userName" class="popinputRegis" type="text" placeholder="Ingresa tu usuario"/>
           <br><span id= "errorUsername2" class="error"> </span><br>
         </div>
         <div class=" col-6 text-regis2">
           <p class="poptext"> Email </p>
-          <input id="email" name= "email" class="popinputRegis" type="password" placeholder="  Ingresa tu usuario"/>
+          <input id="email" name= "email" class="popinputRegis" type="text" placeholder="Ingresa tu email"/>
           <br><span id= "errorEmail" class="error"> </span><br>
 
-          <p class="poptext"> Password </p>
-          <input id="password2" name= "password2" class="popinputRegis" type="password" placeholder="  Ingresa tu usuario"/>
+          <p class="poptext"> Contraseña </p>
+          <input id="password2" name= "password2" class="popinputRegis" type="password" placeholder="Ingresa tu contraseña"/>
           <br><span id= "errorPassword2" class="error"> </span><br>
 
-          <p class="poptext"> Password confirmation </p>
-          <input id="passwordConf" name= "passwordConf" class="popinputRegis" type="password" placeholder="  Ingresa tu usuario"/>
+          <p class="poptext"> Confirmación de Contraseña</p>
+          <input id="passwordConf" name= "passwordConf" class="popinputRegis" type="password" placeholder="Ingresa tu contraseña"/>
           <br><span id= "errorPasswordConfirmation" class="error"> </span><br>
           <br>
         </div>
-        <input type="submit" class="buttonSubmit" id="registration" value="Submit" form= "submitForm">
+        <input type="submit" class="buttonSubmitRegis" id="registration" value="Submit" form= "submitForm">
       </div>
     </div>
   </head>
 
-  <body>
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="redesS-titles"> Redes sociales</h2>
+  <body background="assets/fondo.jpg">
+    <div class="row rowContacto">
+        <div class="col-12 contactoTitle">
+          <h2> Redes sociales</h2>
+        </div>
+      <div class="col-md-4 colContact">
+        <img class="imgFace" alt="" src="assets/logo.jpg">
       </div>
-      <div class="col-md-12">
-        <p><i class="fa fa-facebook fa-2x faceTitle" aria-hidden="true"></i> Don Antojito Movil<p>
-        <p class="facelink">https://www.facebook.com/donantojitomovil/</p>
+      <div class="col-md-4 colContact">
+        <h3 class="textContact">Facebook</h3>
+        <div class="divContact">
+          <img class="imgContacto" alt="" src="assets/face.svg"><span> Don Antojito Movil</span>
+          <img class="imgFace" alt="" src="assets/facebook.png">
+        </div>
+      </div>
+      <div class="col-md-4 colContact">
+        <h3 class="textContact">Whatsapp</h3>
+        <div class="divContact">
+          <img class="imgContacto" alt="" src="assets/wa.png"><span>(81) 8253 - 4415</span>
+          <hr>
+          <img class="imgContacto" alt="" src="assets/wa.png"><span>(81) 1325 - 2918</span>
+        </div>
+
+
+      <!--  <p class="facelink">https://www.facebook.com/donantojitomovil/</p>-->
       </div>
     </div>
 
