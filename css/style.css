@@ -477,5 +477,23 @@ p.card-text{
   border: 1px solid black;
   padding-left: 15px;
   padding-top: 15px;
-  margin-bottom: 80px;
+}
+
+.pago{
+  margin-top: 56px;
+  width: 280px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #525252;
+  background-color: #616161;
+}
+
+.seccionPago{
+  padding-top: 35px;
+  border: 1px solid #c7c7c7;
+}
+
+.marginOrdenes{
+  padding-top: 50px;
 }

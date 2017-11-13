@@ -15,10 +15,14 @@ function mostrarCarrito()
 			success : function(dataReceived){
 
 				var newHtml = "";
+				var pagoDinero = 0;
+				var pago="";
+				var cant=0;
 				var foto = "";
 
 				for (var i=0; i< dataReceived.length; i++)
 				{
+					cant ++;
 					var foto = "";
 					if(dataReceived[i].paquete == "Taquiza"){
 						var foto = '<img src="./assets/taquiza.png" alt="" class="imagenCarrito">';
@@ -36,8 +40,16 @@ function mostrarCarrito()
 					newHtml += '<td class="tdTable tdPersonas"><br><br>'+ dataReceived[i].personas + '</td>';
 					newHtml += '<td class="tdTable tdPrecio"><br><br>' + ' $ ' + dataReceived[i].precio + '<td>';
 					newHtml += '</tr>';
+
+					pagoDinero = (+pagoDinero) + (+dataReceived[i].precio);
 				}
+
+				pago +='<h3>Pago</h3>';
+				pago += '<p> TOTAL ( '+ cant + ' ordenes ): <strong>' + pagoDinero + '</strong></p>';
+				pago += '<button id="pagoOrden" type="submit" class="pago btn">Pagar <i class="fa fa-usd" aria-hidden="true"></i></button>';
+
 				$("#tablaCarrito").append(newHtml);
+				$("#pagoCarrito").append(pago);
 			},
 			error : function(errorMessage){
 				//alert(errorMessage.statusText);
