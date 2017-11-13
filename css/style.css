@@ -547,6 +547,11 @@ p.card-text{
   width: 385px;
   margin-top: 5px;
 }
+.imgLogo{
+  width: 385px;
+  height: 340px;
+  margin-top: 5px;
+}
 .colContact{
   margin-top: 50px;
 }

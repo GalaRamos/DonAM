@@ -292,16 +292,27 @@ $("#closeReview").on("click", function()
 		name1 = $("#username").val();
 		passw = $("#password").val();
 
-		console.log(name1, passw);
+		if (name1 == "" && passw == ""){
+				$("#errorUsername").text("Ingresa tu usuario");
+				$("#errorPassword").text("Ingresa tu contraseña");
+				valid = false;
+			}
 
 		if (name1 == ""){
-				$("#errorUsername").text("Please fill in your username");
+				$("#errorUsername").text("Ingresa tu usuario");
 				valid = false;
 			}
 
 		if(passw == ""){
-				$("#errorPassword").text("Please fill in your password");
+				$("#errorPassword").text("Ingresa tu contraseña");
 				valid = false;
+			}
+		else if (name1 != ""){
+				$("#errorUsername").text("");
+		}
+
+		else if(passw != ""){
+				$("#errorPassword").text("");
 			}
 
 	if (valid){
@@ -330,7 +341,7 @@ $("#closeReview").on("click", function()
 						hideLogs();
 					},
 					error: function(error){
-						alert(error.statusText);
+						$("#errorPassword").text("Usuario o contraseña inválida");
 						console.log("error");
 					}
 				});
@@ -440,6 +451,7 @@ $("#closeReview").on("click", function()
 						document.getElementById('showRegist').style.display = "none";
 					},
 					error: function(error){
+						$("#errorRegisUser").text("Usuario ya existente, favor de intentar con otro");
 						console.log(error.statusText);
 					}
 				}
