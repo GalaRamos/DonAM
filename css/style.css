@@ -40,6 +40,9 @@
 .closeee{
   margin-left: 10px;
 }
+.showOptions{
+  display: none;
+}
 
 /*bar menu*/
 ul#menu{
@@ -250,7 +253,6 @@ ul#menu li:hover, ul#menu li.selected{
 /*reviews*/
 .reviews{
   padding-top: 68px;
-  margin-left: 80px;
 }
 .backImage{
   height: 150vh;
@@ -281,7 +283,7 @@ ul#menu li:hover, ul#menu li.selected{
   color: white;
   text-shadow: 0 1px 1px #000;
   height: 70px;
-  width: 1100px;
+  width: 1090px;
   border-radius: 10px;
   border: 1px solid black;
   padding-left: 15px;
@@ -295,7 +297,7 @@ ul#menu li:hover, ul#menu li.selected{
 .reseñasAgrega{
   margin-top: 216px;
   position: absolute;
-  left: 780px;
+  left: 680px;
   height: 10px;
 }
 .reseñasCarga{
@@ -306,8 +308,6 @@ ul#menu li:hover, ul#menu li.selected{
 }
 .loadReviews{
   background-color: rgba(255, 255, 255, 0.88);
-  padding-left: 10px;
-  padding-right: 10px;
 }
 .betweenAlert{
   margin-top: 100px;
@@ -439,7 +439,43 @@ p.card-text{
   padding-top: 100px;
 }
 
+.tableCarrito{
+  padding-top: 113px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
 
-.showOptions{
-  display: none;
+.imagenCarrito{
+  height: 135px;
+  width: 170px;
+}
+
+.tdTable{
+  padding-left: 0;
+}
+.tdTitle{
+  color:gray;
+}
+.tdPersonas{
+  text-align: center;
+}
+.tdPrecio{
+  padding-left: 15px;
+}
+.table td{
+  border-top: none;
+  border-bottom: 1px solid #e9ecef;
+}
+.carritoTitle{
+  background-color: #a1321f;
+  opacity: 1;
+  color: white;
+  text-shadow: 0 1px 1px #000;
+  height: 70px;
+  width: 1090px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 15px;
+  padding-top: 15px;
+  margin-bottom: 80px;
 }

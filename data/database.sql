@@ -18,7 +18,8 @@ CREATE TABLE Ordenes (
 	username VARCHAR(50) NOT NULL,
   paquete VARCHAR(200) NOT NULL,
   comentarios VARCHAR(200) NOT NULL,
-  precio VARCHAR(200) NOT NULL
+  precio VARCHAR(200) NOT NULL,
+	personas INT(50) NOT NULL
 );
 
 INSERT INTO Users(fName, lName, username, passwrd, email)
