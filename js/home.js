@@ -114,10 +114,10 @@ $(document).ready(function(){
 			dataType : "json",
 			success : function(dataReceived){
 				hideLogs();
-				alert(dataReceived.success);
+				console.log("se borro session");
 			},
 			error : function(errorMessage){
-				alert(errorMessage.statusText);
+				console.log("no se borro session");
 			}
 		});
 
@@ -163,7 +163,7 @@ $(document).ready(function(){
 
 								$("#errorComment").text("");
 								$("#addAlert").append(addAlert);
-								//$("#review").textarea("");
+								$('#review').val('');
 								$("#loadReviews").append(addReview);
 							},
 							error: function(error){
@@ -228,21 +228,36 @@ $(document).ready(function(){
 				//Show a nice alert to say the comment was save
 				var addAlert = "";
 				addAlert += '<div class="alert alert-success alert-dismissible fade show showAlert" role="alert">';
-				addAlert += '<strong>Guardada!</strong> Orden agregada al carrito<button type="button" class="close closeBut" data-dismiss="alert" aria-label="Close">';
+				addAlert += '<strong>Guardada!</strong> Orden agregada al carrito<button type="button" id="closeReview" class="close closeBut" data-dismiss="alert" aria-label="Close">';
 				addAlert += '<span aria-hidden="true">&times;</span></button>';
 				addAlert += '</div>';
 
 				$("#addAlert").append(addAlert);
-
-				},
+				$('#comentarios').val('');
+				$('#numPersonas').val('');
+				$('#paquetes').val('');
+			},
 				error: function(error){
+					var addAlert = "";
+					addAlert += '<div class="alert alert-danger alert-dismissible fade show alertServicio" role="alert">';
+					addAlert += '<strong>Ups!</strong> No se seleccionó ninguna orden<button type="button" class="close closeBut" data-dismiss="alert" aria-label="Close">';
+					addAlert += '<span aria-hidden="true">&times;</span></button>';
+					addAlert += '</div>';
+					$("#addAlert").append(addAlert);
 					//alert(error.statusText);
 					console.log(error.statusText);
 				}
 			});
 	});
 
+//Quit reviews
+/*
+$("#closeReview").on("click", function()
+{
+	$("#review").textarea = "";
+}*/
 
+//Cookie
 	var jsonToSend = {
 		"action" : "COOKIESERVICE"
 	};
@@ -303,7 +318,6 @@ $(document).ready(function(){
 					ContentType: "application/json",
 					dataType: "json",
 					success: function(data){
-						alert("Welcome back " + data.firstname + " " + data.lastname);
 						document.getElementById('LoginPop').style.display = "none";
 						document.getElementById('showLogin').style.display = "none";
 						document.getElementById('showRegist').style.display = "none";

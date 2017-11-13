@@ -45,7 +45,7 @@ function mostrarCarrito()
 				}
 
 				pago +='<h3>Pago</h3>';
-				pago += '<p> TOTAL ( '+ cant + ' ordenes ): <strong>' + pagoDinero + '</strong></p>';
+				pago += '<p> TOTAL ( '+ cant + ' ordenes ): <strong>$ ' + pagoDinero + '</strong></p>';
 				pago += '<button id="pagoOrden" type="submit" class="pago btn">Pagar <i class="fa fa-usd" aria-hidden="true"></i></button>';
 
 				$("#tablaCarrito").append(newHtml);

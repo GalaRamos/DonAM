@@ -427,12 +427,17 @@ p.card-text{
   padding-top: 2px;
   border: 1px solid black;
 }
-
 .pasos{
   margin-left: 75px;
   margin-right: 75px;
 }
-
+.alertServicio{
+  position: absolute;
+  width: 350px;
+  border: 1px solid rgb(130, 0, 0);
+  border-radius: .25rem;
+  margin-bottom: 0;
+}
 
 /*Carrito*/
 .muestraCarro{

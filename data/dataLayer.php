@@ -190,8 +190,8 @@
 			 $result = $connection->query($sql);
 
 			 if ($result->num_rows > 0){
-				 $sql = "INSERT INTO Ordenes(username, paquete, comentarios, precio)
-					 VALUES ('$username', '$paquete', '$comentarios', $numPersonas * 70);";
+				 $sql = "INSERT INTO Ordenes(username, paquete, comentarios, precio, personas)
+					 VALUES ('$username', '$paquete', '$comentarios', $numPersonas * 70, '$numPersonas');";
 					 if (mysqli_query($connection, $sql))
 						 {
 								 $response = array("MESSAGE"=>"SUCCESS");
